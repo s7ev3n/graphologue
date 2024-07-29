@@ -1,8 +1,8 @@
 import { debug, userProvidedAPIKey } from '../constants'
 
-export const globalBestModelAvailable = 'gpt-4-1106-preview'
+export const globalBestModelAvailable = 'moonshot-v1-32k'
 
-export type ModelForMagic = 'gpt-4-1106-preview' | 'gpt-3.5-turbo'
+export type ModelForMagic = 'moonshot-v1-32k' | 'moonshot-v1-8k'
 
 export const models = {
   smarter: globalBestModelAvailable as ModelForMagic,
@@ -84,7 +84,7 @@ export const getOpenAICompletion = async (
   const requestOptions = getRequestOptions(options)
 
   const response = await fetch(
-    'https://api.openai.com/v1/chat/completions',
+    'https://api.moonshot.cn/v1/chat/completions',
     requestOptions,
   )
 
@@ -107,7 +107,7 @@ export const streamOpenAICompletion = async (
   const requestOptions = getRequestOptions(options)
 
   const response = await fetch(
-    'https://api.openai.com/v1/chat/completions',
+    'https://api.moonshot.cn/v1/chat/completions',
     requestOptions,
   )
 
@@ -195,7 +195,7 @@ export const parseOpenAIResponseToObjects = async (
 
   try {
     const response = await fetch(
-      'https://api.openai.com/v1/chat/completions',
+      'https://api.moonshot.cn/v1/chat/completions',
       requestOptions,
     )
 

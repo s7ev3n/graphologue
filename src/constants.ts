@@ -40,9 +40,8 @@ export const styles = {
 }
 
 export const terms = {
-  'gpt-4-1106-preview': 'GPT-4 Turbo',
-  'gpt-4': 'GPT-4',
-  'gpt-3.5-turbo': 'ChatGPT',
+  'moonshot-v1-32k': 'kimi 32k',
+  'moonshot-v1-8k': 'kimi 8k',
   wiki: 'Wikidata', // deprecated
 }
 
